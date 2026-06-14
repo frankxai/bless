@@ -64,7 +64,7 @@ A single Markdown file at `weekly/YYYY-W##.md` (ISO week numbering) with these s
 5. **§4 — The one highest-leverage path for the coming week.** A single sentence, then the unpacking.
 6. **§5 — Handover note.** Code-block formatted; copies cleanly into the next working session.
 
-Length target: 800–1500 words. Surgical, not exhaustive. No hagiography — a blessed thing is named, not celebrated.
+Length target: 800–1500 words. Surgical, not exhaustive. No hagiography — a blessed thing is named, not celebrated. A starting template lives at [`templates/weekly.md`](templates/weekly.md).
 
 ### 3.3 What blessing means (normative definition)
 
@@ -86,7 +86,7 @@ The ritual MUST refuse to:
 
 ## 4. The blessing record
 
-The ledger lives at `bless.md` (human-readable) backed by `blessings.jsonl` (machine-readable, append-only). One JSON object per line:
+The ledger lives at `bless.md` (human-readable) backed by `palace/blessings.jsonl` (machine-readable, append-only). One JSON object per line:
 
 ```json
 {"id":"bless_1718352000_acos","slug":"agentic-creator-os","path":"frankxai/agentic-creator-os","ratifiedAt":"2026-06-14T09:00:00Z","reason":"v10 safety hooks + 38-agent registry reached internal coherence.","scope":"os","commitAtBlessing":"a1b2c3d","week":"2026-W24"}
@@ -99,7 +99,7 @@ The ledger lives at `bless.md` (human-readable) backed by `blessings.jsonl` (mac
 | `path` | string | Repo path, route, file, or `owner/repo`. |
 | `ratifiedAt` | ISO-8601 | When the blessing was recorded. |
 | `reason` | string | One sentence: why it is whole *now*. |
-| `scope` | enum | `file` \| `dir` \| `repo` \| `os` \| `route` \| `practice`. |
+| `scope` | enum | `file` \| `dir` \| `repo` \| `os` \| `site` \| `skill` \| `protocol` \| `artifact` \| `route` \| `practice`. Describes what was ratified; should match the room `kind` (§5) when a room is rendered. |
 | `commitAtBlessing` | string | Commit SHA at the moment of blessing (provenance). |
 | `week` | string | ISO week the blessing belongs to (`YYYY-W##`). |
 
@@ -131,7 +131,10 @@ A palace is built from rooms. Each blessed thing becomes (at most) one room. `pa
 }
 ```
 
-| Field | Type | Meaning |
+This table describes each object in the `rooms` array. The file's root also carries `version`
+(string), `owner` (string), and the `rooms` array itself.
+
+| Room object field | Type | Meaning |
 |---|---|---|
 | `id` | string | Matches the blessing `slug`. |
 | `name` | string | The named artifact (a room is a *named thing*, never a category badge). |
@@ -143,7 +146,7 @@ A palace is built from rooms. Each blessed thing becomes (at most) one room. `pa
 | `surface` | string | Material character: `obsidian` \| `glass` \| `bronze` \| `marble` \| `aurora` \| `slate`. Distinct per room — not recolors of one orb. |
 | `accent` | hex | The room's single accent colour. |
 
-The room shape is the **one source of truth** shared by the builder (writes `rooms.json`) and the renderer (reads it). Renderers MUST tolerate unknown extra fields and MUST supply sane defaults for any optional field.
+The room shape is the **one source of truth** shared by the builder (writes `palace/rooms.json`) and the renderer (reads it). Renderers MUST tolerate unknown extra fields and MUST supply sane defaults for any optional field.
 
 ---
 
