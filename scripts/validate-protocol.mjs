@@ -38,17 +38,20 @@ if (!existsSync(p("SPEC.md"))) {
 if (!existsSync(p("ATTESTATION.md"))) errors.push("missing ATTESTATION.md");
 
 // 4. local markdown links resolve
-const LINK_RE = /\[[^\]]*\]\(([^)]+)\)/g;
+// Match every `](target)` so nested image-badge links — [![alt](img)](target) — are checked too.
+const LINK_RE = /\]\(([^)]+)\)/g;
 for (const file of ["README.md", "SPEC.md", "CONTRIBUTING.md"]) {
   if (!existsSync(p(file))) continue;
+  const dir = dirname(p(file));
   const text = readFileSync(p(file), "utf8");
   let m;
   while ((m = LINK_RE.exec(text)) !== null) {
     let target = m[1].trim();
     if (/^(https?:|mailto:|#)/.test(target)) continue; // external or anchor
-    target = target.split("#")[0].split("?")[0];
+    target = decodeURIComponent(target.split("#")[0].split("?")[0]); // %20 etc.
     if (!target) continue;
-    if (!existsSync(resolve(ROOT, target))) {
+    // resolve relative to the file being checked, not just the repo root
+    if (!existsSync(resolve(dir, target))) {
       errors.push(`${file}: broken local link → ${target}`);
     }
   }
