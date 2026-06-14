@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-label="bless — The Blessing Protocol">
+  <defs>
+    <radialGradient id="seal" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f4c97a" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#f4c97a" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#f4c97a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amb" cx="50%" cy="36%" r="60%">
+      <stop offset="0%" stop-color="#171327" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#09090b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="640" fill="#09090b"/>
+  <rect width="1280" height="640" fill="url(#amb)"/>
+  <g transform="translate(640 244)">
+    <circle r="150" fill="url(#seal)" opacity="0.5"/>
+    <g stroke="#c9b6ff" stroke-width="1.2" opacity="0.16" fill="none">
+      <circle r="70"/><circle r="120"/>
+    </g>
+    <g fill="#c9b6ff">
+      <circle cx="70" cy="0" r="7"/><circle cx="-70" cy="0" r="7"/><circle cx="0" cy="70" r="7"/><circle cx="0" cy="-70" r="7"/>
+    </g>
+    <g fill="#f4c97a">
+      <circle cx="120" cy="0" r="8"/><circle cx="-120" cy="0" r="8"/><circle cx="0" cy="120" r="8"/><circle cx="0" cy="-120" r="8"/>
+    </g>
+    <circle r="15" fill="#f4c97a"/>
+  </g>
+  <text x="640" y="498" text-anchor="middle" font-family="Georgia, serif" font-size="68" fill="#ecedf1">bless</text>
+  <text x="640" y="544" text-anchor="middle" font-family="-apple-system, Segoe UI, sans-serif" font-size="24" fill="#9aa1ad">The Blessing Protocol — witness the week, grow a palace</text>
+  <text x="640" y="590" text-anchor="middle" font-family="ui-monospace, monospace" font-size="15" fill="#c9b6ff" letter-spacing="3">BUILT ON SIP · v0.1 · MIT</text>
+</svg>

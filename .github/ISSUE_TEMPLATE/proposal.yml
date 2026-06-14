@@ -1,0 +1,35 @@
+name: Protocol proposal
+description: Propose a change or addition to the Blessing Protocol.
+title: "proposal: "
+labels: ["proposal"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What is missing or wrong today? Who experiences it?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: The proposal
+      description: What you propose, concretely. Which file/schema/section it touches.
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - Additive (templates, docs, examples)
+        - File contract (the five files)
+        - Record or room schema
+        - Voice register
+        - Breaking change
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
