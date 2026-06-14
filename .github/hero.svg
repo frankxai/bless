@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 340" width="1280" height="340" role="img" aria-label="bless — The Blessing Protocol: witness the week, grow a palace.">
+  <rect width="1280" height="340" fill="#09090b"/>
+
+  <!-- concentric rings of room dots, centered on the seventh-day pulse -->
+  <g transform="translate(300 170)">
+    <!-- slow rotating outermost ring -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="30s" repeatCount="indefinite"/>
+      <g fill="#9aa1ad" opacity="0.55">
+        <circle cx="142" cy="0" r="3.2"><animate attributeName="opacity" values="0;0.55" dur="0.9s" begin="0.0s" fill="freeze"/></circle>
+        <circle cx="100" cy="100" r="3.2"><animate attributeName="opacity" values="0;0.55" dur="0.9s" begin="0.12s" fill="freeze"/></circle>
+        <circle cx="0" cy="142" r="3.2"><animate attributeName="opacity" values="0;0.55" dur="0.9s" begin="0.24s" fill="freeze"/></circle>
+        <circle cx="-100" cy="100" r="3.2"><animate attributeName="opacity" values="0;0.55" dur="0.9s" begin="0.36s" fill="freeze"/></circle>
+        <circle cx="-142" cy="0" r="3.2"><animate attributeName="opacity" values="0;0.55" dur="0.9s" begin="0.48s" fill="freeze"/></circle>
+        <circle cx="-100" cy="-100" r="3.2"><animate attributeName="opacity" values="0;0.55" dur="0.9s" begin="0.60s" fill="freeze"/></circle>
+        <circle cx="0" cy="-142" r="3.2"><animate attributeName="opacity" values="0;0.55" dur="0.9s" begin="0.72s" fill="freeze"/></circle>
+        <circle cx="100" cy="-100" r="3.2"><animate attributeName="opacity" values="0;0.55" dur="0.9s" begin="0.84s" fill="freeze"/></circle>
+      </g>
+    </g>
+
+    <!-- middle ring, violet accents (memory) -->
+    <g fill="#c9b6ff" opacity="0.7">
+      <circle cx="92" cy="0" r="3.6"><animate attributeName="opacity" values="0;0.7" dur="0.8s" begin="0.30s" fill="freeze"/></circle>
+      <circle cx="0" cy="92" r="3.6"><animate attributeName="opacity" values="0;0.7" dur="0.8s" begin="0.46s" fill="freeze"/></circle>
+      <circle cx="-92" cy="0" r="3.6"><animate attributeName="opacity" values="0;0.7" dur="0.8s" begin="0.62s" fill="freeze"/></circle>
+      <circle cx="0" cy="-92" r="3.6"><animate attributeName="opacity" values="0;0.7" dur="0.8s" begin="0.78s" fill="freeze"/></circle>
+      <circle cx="65" cy="65" r="2.6"><animate attributeName="opacity" values="0;0.5" dur="0.8s" begin="0.54s" fill="freeze"/></circle>
+      <circle cx="-65" cy="65" r="2.6"><animate attributeName="opacity" values="0;0.5" dur="0.8s" begin="0.70s" fill="freeze"/></circle>
+      <circle cx="-65" cy="-65" r="2.6"><animate attributeName="opacity" values="0;0.5" dur="0.8s" begin="0.86s" fill="freeze"/></circle>
+      <circle cx="65" cy="-65" r="2.6"><animate attributeName="opacity" values="0;0.5" dur="0.8s" begin="1.02s" fill="freeze"/></circle>
+    </g>
+
+    <!-- inner ring, gold (blessing) -->
+    <g fill="#f4c97a" opacity="0.85">
+      <circle cx="46" cy="0" r="3.4"><animate attributeName="opacity" values="0;0.85" dur="0.7s" begin="0.66s" fill="freeze"/></circle>
+      <circle cx="0" cy="46" r="3.4"><animate attributeName="opacity" values="0;0.85" dur="0.7s" begin="0.80s" fill="freeze"/></circle>
+      <circle cx="-46" cy="0" r="3.4"><animate attributeName="opacity" values="0;0.85" dur="0.7s" begin="0.94s" fill="freeze"/></circle>
+      <circle cx="0" cy="-46" r="3.4"><animate attributeName="opacity" values="0;0.85" dur="0.7s" begin="1.08s" fill="freeze"/></circle>
+    </g>
+
+    <!-- the central seventh-day pulse -->
+    <circle cx="0" cy="0" r="9" fill="#f4c97a">
+      <animate attributeName="r" values="8;12;8" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.95;0.55;0.95" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="9" fill="none" stroke="#f4c97a" stroke-width="1">
+      <animate attributeName="r" values="9;34" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- wordmark + tagline -->
+  <g transform="translate(560 0)">
+    <text x="0" y="158" font-family="Georgia, 'Times New Roman', serif" font-size="118" font-style="italic" fill="#ecedf1" letter-spacing="-2">bless</text>
+    <rect x="4" y="186" width="320" height="1" fill="#ffffff" opacity="0.08"/>
+    <text x="4" y="216" font-family="Georgia, 'Times New Roman', serif" font-size="20" fill="#f4c97a">The Blessing Protocol</text>
+    <text x="4" y="246" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" fill="#9aa1ad">witness the week, grow a palace.</text>
+  </g>
+</svg>

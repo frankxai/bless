@@ -1,6 +1,22 @@
+<div align="center">
+
+<img src=".github/hero.svg" alt="bless — The Blessing Protocol: witness the week, grow a palace." width="100%">
+
 # bless
 
-**The Blessing Protocol** — a weekly, agentic practice for *witnessing* the work you ship and *growing a palace* from it.
+*The Blessing Protocol — a weekly, agentic practice for witnessing the work you ship and growing a palace from it.*
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-f4c97a.svg)](LICENSE)
+[![Built on SIP](https://img.shields.io/badge/Built%20on-SIP-c9b6ff.svg)](https://github.com/frankxai/Starlight-Intelligence-System)
+[![Blessing Protocol](https://img.shields.io/badge/Blessing%20Protocol-v0.1-f4c97a.svg)](SPEC.md)
+[![Validate](https://github.com/frankxai/bless/actions/workflows/validate.yml/badge.svg)](https://github.com/frankxai/bless/actions/workflows/validate.yml)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-c9b6ff.svg)](CONTRIBUTING.md)
+
+[**Why**](#why-this-exists) · [**The five files**](#the-five-files) · [**The weekly loop**](#the-weekly-loop) · [**Quick start**](#quick-start) · [**What blessing means**](#what-blessing-means-precise) · [**Spec**](SPEC.md) · [**Contribute**](CONTRIBUTING.md)
+
+</div>
+
+---
 
 > Work for six days. On the seventh, bless the work.
 
@@ -38,17 +54,14 @@ Lowercase by intent: these are the **public builder tier**. They reconcile with 
 
 ## The weekly loop
 
-```
-   your GitHub + connectors
-            │   ingest  (agent reads the week)
-            ▼
-        bless.md  ──── witness the week, ratify what is whole
-            │   append
-            ▼
-       palace.md  ──── each blessed thing becomes a room
-            │   build
-            ▼
-        a palace  ──── HTML / React / Three.js — grows each Sunday
+Each Sunday, an agent reads the week, the ritual ratifies what is whole, and the palace accrues one ring of rooms.
+
+```mermaid
+graph TD
+    A["your GitHub + connectors"] -->|ingest · agent reads the week| B["bless.md<br/>witness the week, ratify what is whole"]
+    B -->|append| C["palace.md<br/>each blessed thing becomes a room"]
+    C -->|build| D["a palace<br/>HTML · React · Three.js — grows each Sunday"]
+    D -.->|next Sunday| A
 ```
 
 1. **Ingest.** An agent rolls your week's commits across repos and surfaces what changed.
@@ -81,10 +94,23 @@ You do not need the full toolchain to start. The minimum viable practice is `ble
 
 Blessing is not permanent and not a promotion. New facts can break wholeness; new ambition can compose new rooms. When that happens, the next week's witness records it. Until then, the blessing stands.
 
+The normative definition, the refusals the ritual must honor, the ledger and room schemas, and the SIP reconciliation all live in [`SPEC.md`](SPEC.md). The honest claim a practitioner may carry lives in [`ATTESTATION.md`](ATTESTATION.md).
+
 ---
 
 ## License
 
 MIT. The spec, the templates, the file contract — open forever. See [`LICENSE`](LICENSE).
 
-Built on SIP · The Blessing Protocol v0.1
+---
+
+## The Blessing family
+
+| Repo | Role |
+|---|---|
+| [**bless**](https://github.com/frankxai/bless) | The open standard — the Blessing Protocol |
+| [**mind-palace-agent-skills**](https://github.com/frankxai/mind-palace-agent-skills) | Portable agent skills — ingest · witness · grow |
+| [**frankx-mind-palace**](https://github.com/frankxai/frankx-mind-palace) | The mind — Frank's blessed work as data |
+| [**frankx-palace**](https://github.com/frankxai/frankx-palace) | The palace — the 3D memory palace that grows each Sunday |
+
+<sub>Built on SIP · The Blessing Protocol v0.1 · MIT</sub>

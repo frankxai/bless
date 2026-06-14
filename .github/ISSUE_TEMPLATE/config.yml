@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the spec first
+    url: https://github.com/frankxai/bless/blob/main/SPEC.md
+    about: The Blessing Protocol — the file contract, ritual, schemas, voice.
+  - name: SIP substrate
+    url: https://github.com/frankxai/Starlight-Intelligence-System
+    about: The substrate the lowercase file-contract reconciles with.
+  - name: frankx.ai
+    url: https://frankx.ai
+    about: Frank's hub.
