@@ -13,12 +13,17 @@
 
 ## Cadence
 
+- **Daily** (`dawn.md`): the orientation — standing capability before new work. Never blesses.
 - **Weekly** (Sunday): the active ritual. Invoked, never auto-fired. A skipped week is silent.
 - Higher cadences (monthly / quarterly / annual) activate only after the weekly has proven it runs.
+
+The day observes; the week ratifies. Collapsing the two destroys the value of both.
 
 ## What is blessable here
 
 - <Scopes that can be blessed in this repo: a route, a module, an OS, a practice…>
+- **Instruments** too (`scope: instrument`) — an agent, skill, or model from `lineage.md`, once its
+  attribution is `honored` and its licence known. Blessing Protocol §11.5.
 - A thing must be **whole at this moment** — not merely shipped. Minimum soak: 7 days.
 
 ## What blessing means
@@ -44,4 +49,4 @@ what is too young to have met reality, and what is offered out of restlessness r
 
 ---
 
-Built on SIP · bless.md (bless v0.1)
+Built on SIP · bless.md (bless v0.2)

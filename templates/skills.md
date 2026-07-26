@@ -27,4 +27,4 @@
 
 ---
 
-Built on SIP · skills.md (bless v0.1)
+Built on SIP · skills.md (bless v0.2)

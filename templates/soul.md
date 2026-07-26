@@ -35,4 +35,4 @@ A small set of invariants. If any silently changes, this has stopped being itsel
 
 ---
 
-Built on SIP · soul.md (bless v0.1)
+Built on SIP · soul.md (bless v0.2)
