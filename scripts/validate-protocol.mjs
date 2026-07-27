@@ -3,10 +3,11 @@
  * validate-protocol.mjs — CI guard for the Blessing Protocol repo.
  *
  * Asserts:
- *  1. the five standard templates + weekly.md exist under templates/
- *  2. SPEC.md references each of the five files + weekly.md
+ *  1. every standard template (core + standing tier) + weekly.md exists under templates/
+ *  2. SPEC.md references each template file
  *  3. ATTESTATION.md exists
  *  4. every local markdown link in README.md + SPEC.md resolves on disk
+ *  5. the spec version is stated consistently across SPEC.md, README.md and ATTESTATION.md
  *
  * Zero-dependency. Exit 0 on success, 1 with specific errors.
  */
@@ -18,8 +19,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const errors = [];
 const p = (rel) => resolve(ROOT, rel);
 
-// 1. templates exist
-const TEMPLATES = ["soul", "agent", "skills", "palace", "bless", "weekly"];
+// 1. templates exist — core tier (v0.1) + standing tier (v0.2) + the weekly output template
+const TEMPLATES = ["soul", "agent", "skills", "palace", "bless", "weekly", "dawn", "lineage", "intent"];
 for (const t of TEMPLATES) {
   if (!existsSync(p(`templates/${t}.md`))) errors.push(`missing template: templates/${t}.md`);
 }
@@ -57,9 +58,30 @@ for (const file of ["README.md", "SPEC.md", "CONTRIBUTING.md"]) {
   }
 }
 
+// 5. version stated consistently. SPEC.md's H1 is the source of truth; the README badge and the
+// attestation block must name the same version, or adopters copy a stale block into their repo.
+let version = null;
+if (existsSync(p("SPEC.md"))) {
+  const m = /^#\s+The Blessing Protocol\s+—\s+(v\d+\.\d+)/m.exec(readFileSync(p("SPEC.md"), "utf8"));
+  if (!m) {
+    errors.push("SPEC.md: no parseable version in the H1 (expected '# The Blessing Protocol — vX.Y')");
+  } else {
+    version = m[1];
+    for (const file of ["README.md", "ATTESTATION.md"]) {
+      if (!existsSync(p(file))) continue;
+      if (!readFileSync(p(file), "utf8").includes(version)) {
+        errors.push(`${file}: does not state the current spec version (${version})`);
+      }
+    }
+  }
+}
+
 if (errors.length) {
   console.error("FAIL — Blessing Protocol validation");
   for (const e of errors) console.error(`  - ${e}`);
   process.exit(1);
 }
-console.log("OK — five files + weekly template present, SPEC references intact, local links resolve.");
+console.log(
+  `OK — ${TEMPLATES.length} templates present, SPEC references intact, local links resolve, ` +
+    `version ${version} stated consistently.`,
+);

@@ -41,4 +41,4 @@ Pick by the nature of the thing — infrastructure reads `slate`/`obsidian`; cre
 
 ---
 
-Built on SIP · palace.md (bless v0.1)
+Built on SIP · palace.md (bless v0.2)

@@ -45,4 +45,4 @@
 
 ---
 
-Built on SIP · bless v0.1 · Voice: Palace Architect
+Built on SIP · bless v0.2 · Voice: Palace Architect
