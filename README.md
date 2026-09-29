@@ -23,7 +23,7 @@
 
 `bless` is an open standard. It defines eight small files any repository can adopt, two cadences, and one honest attestation — so that an AI agent can read a builder's GitHub, witness what became whole this week, witness the instruments that made it, and render both as a palace that grows more beautiful over time.
 
-This is not a productivity tracker and not a spirituality. It is a **closure practice**: naming a thing whole frees the attention the open loop was costing you (Zeigarnik). The "blessing" is the act of witnessing — nothing supernatural is claimed.
+This is not a productivity tracker and not a spirituality. It is a **closure practice**: naming a thing whole is meant to ease the attention an open loop costs (the idea behind the Zeigarnik effect; this protocol does not test it). The "blessing" is the act of witnessing — nothing supernatural is claimed.
 
 ---
 
