@@ -22,4 +22,4 @@ This is the loop, end to end: GitHub → blessing → ledger → rooms → palac
 
 ---
 
-Built on SIP · The Blessing Protocol v0.1
+Built on SIP · The Blessing Protocol v0.2
