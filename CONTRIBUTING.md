@@ -10,7 +10,7 @@ By participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Ways to contribute
 
-- **Adopt it.** Drop the [five files](README.md#the-five-files) into a repo and run a Sunday
+- **Adopt it.** Drop the [files](README.md#the-files) into a repo and run a Sunday
   ritual. Lived adoption is the most useful feedback the protocol can get.
 - **Extend a template.** Improve a starting template in [`templates/`](templates/) without
   breaking the file contract in [`SPEC.md` §2](SPEC.md).
@@ -24,7 +24,7 @@ By participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Proposing a change to the spec
 
-The normative surface — the five-file contract, the `blessings.jsonl` record, the `rooms.json`
+The normative surface — the file contract, the `blessings.jsonl` record, the `rooms.json`
 room schema, the voice register — changes deliberately, never casually. Before opening a PR that
 touches any of it:
 
@@ -60,7 +60,7 @@ Examples: `feat/rooms-schema-aurora-surface` · `fix/spec-section-anchor` · `do
 
 - Run the validator locally: `node scripts/validate-protocol.mjs`. It must exit `0`.
 - Keep the change surgical. Touch only what the proposal named.
-- If you added or renamed a template, make sure `SPEC.md` still references all five files plus
+- If you added or renamed a template, make sure `SPEC.md` still references every template plus
   `weekly.md`, and that the validator still passes.
 - Fill out the PR template: What / Why / Spec impact / Checklist.
 
@@ -74,4 +74,4 @@ PRs are reviewed for: correctness against the spec, restraint (does this need to
 voice. A change that passes the validator but fails restraint will be sent back. The answer is
 usually less.
 
-Built on SIP · The Blessing Protocol v0.1 · MIT
+Built on SIP · The Blessing Protocol v0.2 · MIT

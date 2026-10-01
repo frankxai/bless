@@ -87,7 +87,7 @@ Length target: 800–1500 words. Surgical, not exhaustive. No hagiography — a 
 
 > **Blessed = whole at this moment.** Further iteration is creator-restlessness, not improvement. Future-you may extend it from a new vantage; present-you does not.
 
-This is closure semantics (Kahneman/Zeigarnik), **not** a metaphysical claim. A blessing is falsifiable: new facts may break wholeness, and the next week records it. A blessing does not lock, delete, or promote the work.
+This is closure semantics (after the Zeigarnik effect), **not** a metaphysical claim, and the protocol does not test that effect. A blessing is falsifiable: new facts may break wholeness, and the next week records it. A blessing does not lock, delete, or promote the work.
 
 ### 3.4 Refusals (normative)
 

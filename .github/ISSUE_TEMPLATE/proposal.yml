@@ -23,7 +23,7 @@ body:
       label: Scope
       options:
         - Additive (templates, docs, examples)
-        - File contract (the five files)
+        - File contract (the file tiers)
         - Record or room schema
         - Voice register
         - Breaking change

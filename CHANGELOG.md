@@ -3,6 +3,11 @@
 All notable changes to the Blessing Protocol spec. The spec is versioned independently of any
 implementation. Format loosely follows Keep a Changelog.
 
+## [Unreleased]
+
+### Fixed
+- `SPEC.md` §3.3 no longer attributes closure semantics to Kahneman; it cites the Zeigarnik effect and says the protocol does not test it. The README states the same. The public site (`docs/index.html`) and the OG card now show v0.2 and the eight-file contract, and `CONTRIBUTING.md` no longer links a README anchor that does not exist. Normative text is unchanged.
+
 ## [0.2.0] — 2026-07-26
 
 The standing tier. v0.1 witnesses what a builder *made*; v0.2 adds the half that witnesses what
